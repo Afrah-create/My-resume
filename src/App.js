@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import Layout from './Components/Layout/Layout';  // Capital C
+import Header from './Components/sections/Header/Header';
+import Education from './Components/sections/Education/Education';
+import Experience from './Components/sections/Experiences/Experience'; // Note: folder is "Experiences"
+import Projects from './Components/sections/Projects/Projects';
+import Skills from './Components/sections/Skills/Skills';
+import { resumeData } from './data/resumeData';
 import './App.css';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('header');
+
+  const sections = [
+    { id: 'header', label: 'About', component: Header },
+    { id: 'education', label: 'Education', component: Education },
+    { id: 'experience', label: 'Experience', component: Experience },
+    { id: 'projects', label: 'Projects', component: Projects },
+    { id: 'skills', label: 'Skills', component: Skills }
+  ];
+
+  const ActiveComponent = sections.find(section => section.id === activeSection)?.component || Header;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout 
+        sections={sections}
+        activeSection={activeSection}
+        onSectionChange={setActiveSection}
+      >
+        <ActiveComponent data={resumeData} />
+      </Layout>
     </div>
   );
 }
