@@ -9,40 +9,68 @@ const Header = ({ data }) => {
   
   return (
     <header className="header">
-      <div className="header-content">
-        <h1>{personal.name}</h1>
-        <h2>{personal.title}</h2>
-        <p className="summary">{personal.summary}</p>
-        
-        <div className="contact-info">
-          <a href={`mailto:${personal.email}`} className="contact-item">
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span>{personal.email}</span>
-          </a>
-          
-          <a href={`tel:${personal.phone.replace(/\D/g, '')}`} className="contact-item">
-            <FontAwesomeIcon icon={faPhone} />
-            <span>{personal.phone}</span>
-          </a>
-          
-          <div className="contact-item">
-            <FontAwesomeIcon icon={faMapMarkerAlt} />
-            <span>{personal.location}</span>
-          </div>
+      <div className="about-layout">
+        <div className="about-avatar">
+          {personal?.avatar ? (
+            <img
+              src={personal.avatar}
+              alt={`${personal.name} headshot`}
+              className="avatar-img"
+            />
+          ) : (
+            <div className="avatar-placeholder" aria-label="Profile photo placeholder" />
+          )}
         </div>
-        
-        <div className="social-links">
-          {personal.github && (
-            <a href={personal.github} target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          )}
-          
-          {personal.linkedin && (
-            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          )}
+
+        <div className="about-main">
+          <div className="header-content">
+            <h1>{personal.name}</h1>
+            <h2>{personal.title}</h2>
+            <p className="summary">{personal.summary}</p>
+
+            <div className="contact-info">
+              <a href={`mailto:${personal.email}`} className="contact-item">
+                <FontAwesomeIcon icon={faEnvelope} />
+                <span>{personal.email}</span>
+              </a>
+
+              <a href={`tel:${personal.phone.replace(/\D/g, '')}`} className="contact-item">
+                <FontAwesomeIcon icon={faPhone} />
+                <span>{personal.phone}</span>
+              </a>
+
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+                <span>{personal.location}</span>
+              </div>
+            </div>
+
+            <div className="social-links">
+              {personal.github && (
+                <a
+                  href={personal.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="GitHub"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              )}
+
+              {personal.linkedin && (
+                <a
+                  href={personal.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="LinkedIn"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </header>
