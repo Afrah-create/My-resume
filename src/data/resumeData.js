@@ -17,8 +17,8 @@ export const resumeData = {
       degree: "Bachelor of Science in Software Engineering",
       school: "Makerere University",
       logo: "/images/education/Mak_Logo-removebg-preview.png", // placeholder logo
-      startDate: "January 2025",
-      endDate: "Expected May 2026",
+      startDate: "August 2024",
+      endDate: "Expected January 2029",
       gpa: "4.5",
       relevantCourses: [
         "Data Structures & Algorithms",
@@ -35,7 +35,7 @@ export const resumeData = {
       degree: "Uganda Advanced Certificate of Education (A-Level)",
       school: "Aringa Secondary School",
       logo: "/images/education/Aringa-Logo.jpg", // placeholder logo
-      startDate: "2022",
+      startDate: "2021",
       endDate: "2023",
       relevantCourses: ["Mathematics", "Physics", "ICT"]
     },
@@ -147,8 +147,8 @@ export const resumeData = {
       title: "Portfolio Website",
       description: "A responsive portfolio website built with React and styled-components to showcase projects and skills.",
       technologies: ["React", "styled-components", "Framer Motion", "React Icons"],
-      githubUrl: "https://github.com/username/portfolio",
-      demoUrl: "https://portfolio-demo.example.com",
+      githubUrl: "https://github.com/Afrah-Create/portfolio",
+      demoUrl: "https://afrah-create.github.io/portfolio/",
       image: "/images/projects/potfolio.jpg"
     },
     {
