@@ -22,10 +22,6 @@ const Education = ({ data }) => {
   
   return (
     <section className="section">
-      <h2 className="section-title">
-        <FontAwesomeIcon icon={faGraduationCap} className="section-icon" />
-        Education
-      </h2>
       
       <div className="education timeline">
         {education.map((edu) => (

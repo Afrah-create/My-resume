@@ -133,12 +133,36 @@
   background: rgba(255,255,255,0.75);
   border-bottom: 1px solid rgba(2,6,23,0.06);
   backdrop-filter: blur(10px);
+  position: sticky;
+  /* keep items visually balanced while centering the title absolutely */
+  justify-content: flex-start;
+  position: sticky;
 }
 
 .topbar-title {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   letter-spacing: 0.2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  width: 60vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
+.topbar-icon {
+  font-size: 1.15em; /* scales with title size */
+  color: #0f172a;
+}
+.topbar-text { line-height: 1; }
 
 .nav-toggle {
   display: inline-flex; /* always visible */
@@ -201,7 +225,8 @@
     padding: 0 var(--spacing-md);
   }
   .topbar-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    width: 70vw;
   }
   .content-inner {
     padding: var(--spacing-md);

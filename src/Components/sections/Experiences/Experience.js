@@ -54,10 +54,6 @@ const Experience = ({ data }) => {
 
   return (
     <section className="section">
-      <h2 className="section-title">
-        <FontAwesomeIcon icon={faBriefcase} className="section-icon" />
-        Work Experience
-      </h2>
       
       <div className="experience-container">
         <div className="experience-timeline">

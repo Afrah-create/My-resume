@@ -23,10 +23,6 @@ const Projects = ({ data }) => {
 
   return (
     <section className="section">
-      <h2 className="section-title">
-        <FontAwesomeIcon icon={faCode} className="section-icon" />
-        Projects
-      </h2>
       
       <div className="projects-container">
         <div className="projects-grid">

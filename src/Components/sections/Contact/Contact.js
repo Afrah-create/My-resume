@@ -10,8 +10,7 @@ const Contact = ({ data }) => {
 
   return (
     <section className="contact-section">
-      <h2 className="section-title">Contact</h2>
-
+      
       <div className="contact-grid">
         <div className="contact-card card">
           <h3>Get in touch</h3>

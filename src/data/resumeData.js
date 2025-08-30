@@ -166,8 +166,8 @@ export const resumeData = {
     ],
     "Languages": [
       { name: "English", level: 95, proficiency: "Fluent" },
-      { name: "Spanish", level: 70, proficiency: "Intermediate" },
-      { name: "French", level: 40, proficiency: "Basic" }
+      { name: "Gimara", level: 70, proficiency: "Intermediate" },
+      { name: "Lugbara", level: 40, proficiency: "Basic" }
     ]
   }
 }; // Fixed: Removed extra semicolon

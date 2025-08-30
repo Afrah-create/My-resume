@@ -26,10 +26,6 @@ const Skills = ({ data }) => {
   
   return (
     <section className="section">
-      <h2 className="section-title">
-        <FontAwesomeIcon icon={faCode} className="section-icon" />
-        Skills & Expertise
-      </h2>
       
       <div className="skills-container">
         <div className="skills-grid">

@@ -2,9 +2,30 @@
 import React, { useState } from 'react';
 import './Layout.css';
 import { resumeData } from '../../data/resumeData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faGraduationCap, faBriefcase, faCode, faCog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Layout = ({ children, sections, activeSection, onSectionChange }) => {
   const [open, setOpen] = useState(false);
+
+  const iconForSection = (id) => {
+    switch (id) {
+      case 'header':
+        return faUser;
+      case 'education':
+        return faGraduationCap;
+      case 'experience':
+        return faBriefcase;
+      case 'projects':
+        return faCode;
+      case 'skills':
+        return faCog;
+      case 'contact':
+        return faEnvelope;
+      default:
+        return faUser;
+    }
+  };
 
   const handleNavigate = (id) => {
     onSectionChange(id);
@@ -87,7 +108,10 @@ const Layout = ({ children, sections, activeSection, onSectionChange }) => {
               </svg>
             )}
           </button>
-          <h1 className="topbar-title">{sections.find(s => s.id === activeSection)?.label || 'About'}</h1>
+          <h1 className="topbar-title">
+            <FontAwesomeIcon icon={iconForSection(activeSection)} className="topbar-icon" />
+            <span className="topbar-text">{sections.find(s => s.id === activeSection)?.label || 'About'}</span>
+          </h1>
         </header>
 
         <div className="content-inner">
