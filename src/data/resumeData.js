@@ -33,53 +33,68 @@ export const resumeData = {
   experience: [
     {
       id: 1,
-      title: "Software Engineering Intern",
-      company: "TechSolutions Inc.",
-      companyUrl: "https://techsolutions.example.com",
-      location: "San Francisco, CA (Remote)",
-      startDate: "June 2024",
+      title: "Student Developer",
+      company: "E-Commerce Platform",
+      companyUrl: "https://ecommerce-demo.example.com",
+      location: "Kampala, Uganda (Remote)",
+      startDate: "Jan 2025",
       endDate: "Present",
-      description: "Working on the core product team to develop and maintain enterprise-level web applications.",
+      description: "Designed and built a full-stack e-commerce platform with secure authentication, product catalog, cart, and Stripe-powered checkout.",
       responsibilities: [
-        "Developed and maintained responsive web applications using React, Redux, and TypeScript, improving user experience by 25%",
-        "Collaborated with cross-functional teams to design and implement new features, following Agile methodologies",
-        "Optimized application performance, reducing load times by 40% through code splitting and lazy loading",
-        "Wrote unit and integration tests using Jest and React Testing Library, achieving 90% test coverage",
-        "Participated in code reviews and provided constructive feedback to maintain code quality"
+        "Implemented responsive React UI with protected routes and Redux state management",
+        "Developed Node.js APIs for products, users, orders, and payments",
+        "Integrated Stripe for real payments and order workflows",
+        "Optimized bundle size and added code-splitting and lazy loading"
       ],
-      technologies: ["React", "TypeScript", "Redux", "Node.js", "Jest", "Git"]
+      technologies: ["React", "Redux", "Node.js", "MongoDB", "Stripe API"]
     },
     {
       id: 2,
-      title: "Full Stack Developer Intern",
-      company: "WebCraft Studios",
-      companyUrl: "https://webcraft.example.com",
-      location: "New York, NY",
-      startDate: "May 2023",
-      endDate: "August 2023",
-      description: "Contributed to the development of client websites and web applications.",
+      title: "Student Developer",
+      company: "School Website",
+      companyUrl: "https://school.example.com",
+      location: "Kampala, Uganda",
+      startDate: "Nov 2024",
+      endDate: "Dec 2024",
+      description: "Built a modern, accessible multi-page school website including academics, admissions, news, gallery, and contact sections.",
       responsibilities: [
-        "Built and deployed 10+ responsive websites using React, Node.js, and MongoDB",
-        "Implemented RESTful APIs to connect front-end components with server-side logic",
-        "Improved website performance by optimizing images and implementing lazy loading",
-        "Collaborated with UI/UX designers to implement pixel-perfect interfaces"
+        "Created semantic, accessible pages with reusable components",
+        "Ensured mobile-first responsiveness and fast load times",
+        "Implemented simple form handling and basic client-side validation"
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Express", "REST APIs"]
+      technologies: ["HTML5", "CSS3", "JavaScript"]
     },
     {
       id: 3,
-      title: "Teaching Assistant - Web Development",
-      company: "University Computer Science Department",
-      location: "Boston, MA",
-      startDate: "January 2023",
-      endDate: "May 2023",
-      description: "Assisted students in learning web development fundamentals.",
+      title: "Project Developer",
+      company: "Portfolio Website",
+      companyUrl: "https://portfolio-demo.example.com",
+      location: "Kampala, Uganda",
+      startDate: "Sep 2024",
+      endDate: "Oct 2024",
+      description: "Developed a responsive portfolio with smooth animations and component-based styling to showcase projects and skills.",
       responsibilities: [
-        "Conducted weekly lab sessions to help students understand HTML, CSS, and JavaScript concepts",
-        "Graded assignments and provided detailed feedback to help students improve their coding skills",
-        "Held office hours to provide one-on-one assistance with course material and projects"
+        "Implemented sections for About, Projects, Skills, and Contact",
+        "Added animations and interactive elements for engaging UX",
+        "Optimized images and used lazy loading to improve performance"
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "VS Code"]
+      technologies: ["React", "styled-components", "Framer Motion"]
+    },
+    {
+      id: 4,
+      title: "Student Developer",
+      company: "Supply Chain Management System",
+      companyUrl: "https://scm-demo.example.com",
+      location: "Kampala, Uganda (Remote)",
+      startDate: "Mar 2025",
+      endDate: "Present",
+      description: "Built core modules for inventory, procurement, supplier management, and order tracking with role-based access control.",
+      responsibilities: [
+        "Designed relational schema and implemented CRUD features",
+        "Developed Blade-based views with reusable layouts and components",
+        "Secured endpoints and dashboards with RBAC and middleware"
+      ],
+      technologies: ["Laravel", "PHP", "MySQL", "Blade", "REST APIs"]
     }
   ], // Fixed: Added closing bracket and comma
   projects: [
@@ -103,15 +118,6 @@ export const resumeData = {
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A weather application providing current weather conditions and forecasts using the OpenWeather API.",
-      technologies: ["JavaScript", "CSS3", "OpenWeather API", "Webpack"],
-      githubUrl: "https://github.com/username/weather-dashboard",
-      demoUrl: "https://weather-demo.example.com",
-      image: "/images/projects/weather.JPG"
-    },
-    {
-      id: 4,
       title: "Portfolio Website",
       description: "A responsive portfolio website built with React and styled-components to showcase projects and skills.",
       technologies: ["React", "styled-components", "Framer Motion", "React Icons"],
@@ -120,15 +126,7 @@ export const resumeData = {
       image: "/images/projects/potfolio.jpg"
     },
     {
-      id: 5,
-      title: "Recipe Finder",
-      description: "A web application to search and filter recipes based on ingredients, with step-by-step cooking instructions.",
-      technologies: ["Vue.js", "Vuex", "Spoonacular API", "Tailwind CSS"],
-      githubUrl: "https://github.com/username/recipe-finder",
-      demoUrl: "https://recipes-demo.example.com"
-    },
-    {
-      id: 6,
+      id: 4,
       title: "Supply Chain Management System",
       description: "An end-to-end supply chain management system built with Laravel handling inventory, procurement, supplier management, order tracking, and role-based access control.",
       technologies: ["Laravel", "PHP", "MySQL", "Blade", "REST APIs"],
