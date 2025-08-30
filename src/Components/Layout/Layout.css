@@ -119,12 +119,16 @@
   position: relative;
   min-width: 0;
   overflow: visible;
+  /* offset for fixed topbar height */
+  padding-top: 64px;
 }
 
 .topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 15;
+  left: 0;
+  right: 0;
+  z-index: 950; /* below sidebar(1000), above overlay(900) */
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -133,10 +137,8 @@
   background: rgba(255,255,255,0.75);
   border-bottom: 1px solid rgba(2,6,23,0.06);
   backdrop-filter: blur(10px);
-  position: sticky;
   /* keep items visually balanced while centering the title absolutely */
   justify-content: flex-start;
-  position: sticky;
 }
 
 .topbar-title {
@@ -228,6 +230,7 @@
     font-size: 1.1rem;
     width: 70vw;
   }
+  .content { padding-top: 56px; }
   .content-inner {
     padding: var(--spacing-md);
   }
