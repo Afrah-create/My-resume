@@ -25,11 +25,32 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Thumbnail area (image or placeholder) */
+.project-thumb {
+  width: 100%;
+  height: 200px;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
 .project-image {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
-  border-bottom: 1px solid var(--border);
+}
+
+.project-thumb--placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .project-content {
@@ -90,6 +111,32 @@
 .project-link:hover {
   color: var(--primary);
   text-decoration: underline;
+}
+
+/* Button-like links */
+.btn-link {
+  background: var(--light-gray);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
+
+.btn-link:hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.btn-link.primary {
+  background: var(--secondary);
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn-link.primary:hover {
+  filter: brightness(0.95);
 }
 
 .project-link-icon {

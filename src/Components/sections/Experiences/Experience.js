@@ -39,6 +39,19 @@ const Experience = ({ data }) => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
+  const getInitials = (name = '') => {
+    try {
+      return name
+        .split(' ')
+        .filter(Boolean)
+        .slice(0, 2)
+        .map(w => w[0]?.toUpperCase())
+        .join('');
+    } catch {
+      return '';
+    }
+  };
+
   return (
     <section className="section">
       <h2 className="section-title">
@@ -60,20 +73,31 @@ const Experience = ({ data }) => {
               
               <div className="timeline-content">
                 <div className="job-header">
-                  <h3 className="timeline-title">{exp.title}</h3>
-                  {exp.companyUrl ? (
-                    <a 
-                      href={exp.companyUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="company-link"
-                    >
-                      {exp.company}
-                      <FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" />
-                    </a>
-                  ) : (
-                    <span className="company">{exp.company}</span>
-                  )}
+                  <div className="company-logo">
+                    {exp.logo ? (
+                      <img src={exp.logo} alt={`${exp.company} logo`} />
+                    ) : (
+                      <div className="company-logo--placeholder" aria-label={`${exp.company} logo placeholder`}>
+                        {getInitials(exp.company)}
+                      </div>
+                    )}
+                  </div>
+                  <div className="job-titles">
+                    <h3 className="timeline-title">{exp.title}</h3>
+                    {exp.companyUrl ? (
+                      <a 
+                        href={exp.companyUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="company-link"
+                      >
+                        {exp.company}
+                        <FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" />
+                      </a>
+                    ) : (
+                      <span className="company">{exp.company}</span>
+                    )}
+                  </div>
                 </div>
                 
                 {exp.location && (

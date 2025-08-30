@@ -8,6 +8,19 @@ import './styles.css';
 const Projects = ({ data }) => {
   const { projects } = data;
   
+  const getInitials = (text = '') => {
+    try {
+      return text
+        .split(' ')
+        .filter(Boolean)
+        .slice(0, 2)
+        .map(w => w[0]?.toUpperCase())
+        .join('');
+    } catch {
+      return '';
+    }
+  };
+
   return (
     <section className="section">
       <h2 className="section-title">
@@ -19,17 +32,24 @@ const Projects = ({ data }) => {
         <div className="projects-grid">
           {projects.map((project) => (
             <div key={project.id} className="project-card">
-              {project.image && (
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="project-image"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/400x200?text=Project+Image';
-                  }}
-                />
-              )}
+              <div className="project-thumb">
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    loading="lazy"
+                    className="project-image"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://via.placeholder.com/600x300?text=Project+Image';
+                    }}
+                  />
+                ) : (
+                  <div className="project-thumb--placeholder" aria-label={`${project.title} placeholder`}>
+                    {getInitials(project.title)}
+                  </div>
+                )}
+              </div>
               
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
@@ -45,11 +65,11 @@ const Projects = ({ data }) => {
                 
                 <div className="project-links">
                   {project.githubUrl && (
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
+                      className="project-link btn-link"
                       aria-label="View on GitHub"
                     >
                       <FontAwesomeIcon icon={faGithub} className="project-link-icon" />
@@ -58,11 +78,11 @@ const Projects = ({ data }) => {
                   )}
                   
                   {project.demoUrl && (
-                    <a 
-                      href={project.demoUrl} 
-                      target="_blank" 
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
+                      className="project-link btn-link primary"
                       aria-label="View Live Demo"
                     >
                       <FontAwesomeIcon icon={faExternalLinkAlt} className="project-link-icon" />

@@ -9,7 +9,7 @@ export const resumeData = {
     linkedin: "https://linkedin.com/in/yourprofile",
     github: "https://github.com/Afrah-Create",
     summary: "Passionate software engineering student with strong technical skills in full-stack development. Experienced in building responsive web applications using modern JavaScript frameworks and libraries. Strong problem-solving abilities and a commitment to writing clean, maintainable code.",
-    avatar: "/path/to/your/avatar.jpg"
+    avatar: "/images/about/Fahad.jpg"
   },
   education: [
     {
@@ -90,16 +90,16 @@ export const resumeData = {
       technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Redux"],
       githubUrl: "https://github.com/username/ecommerce-platform",
       demoUrl: "https://ecommerce-demo.example.com",
-      image: "https://via.placeholder.com/600x300?text=E-Commerce+Platform"
+      image: "/images/projects/e-commerce.JPG"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, task assignments, and progress tracking.",
-      technologies: ["React", "Firebase", "Material-UI", "Redux Toolkit"],
-      githubUrl: "https://github.com/username/task-manager",
-      demoUrl: "https://taskmanager-demo.example.com",
-      image: "https://via.placeholder.com/600x300?text=Task+Manager"
+      title: "School Website",
+      description: "A responsive informational website for a secondary school featuring pages for academics, admissions, news, gallery, and contact, optimized for performance and accessibility.",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      githubUrl: "https://github.com/username/school-website",
+      demoUrl: "https://school.example.com",
+      image: "/images/projects/school.JPG"
     },
     {
       id: 3,
@@ -108,7 +108,7 @@ export const resumeData = {
       technologies: ["JavaScript", "CSS3", "OpenWeather API", "Webpack"],
       githubUrl: "https://github.com/username/weather-dashboard",
       demoUrl: "https://weather-demo.example.com",
-      image: "https://via.placeholder.com/600x300?text=Weather+Dashboard"
+      image: "/images/projects/weather.JPG"
     },
     {
       id: 4,
@@ -117,7 +117,7 @@ export const resumeData = {
       technologies: ["React", "styled-components", "Framer Motion", "React Icons"],
       githubUrl: "https://github.com/username/portfolio",
       demoUrl: "https://portfolio-demo.example.com",
-      image: "https://via.placeholder.com/600x300?text=Portfolio"
+      image: "/images/projects/potfolio.jpg"
     },
     {
       id: 5,
@@ -129,12 +129,12 @@ export const resumeData = {
     },
     {
       id: 6,
-      title: "Blog Platform",
-      description: "A content management system for bloggers with markdown support, categories, and user comments.",
-      technologies: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Markdown"],
-      githubUrl: "https://github.com/username/blog-platform",
-      demoUrl: "https://blog-demo.example.com",
-      image: "https://via.placeholder.com/600x300?text=Blog+Platform"
+      title: "Supply Chain Management System",
+      description: "An end-to-end supply chain management system built with Laravel handling inventory, procurement, supplier management, order tracking, and role-based access control.",
+      technologies: ["Laravel", "PHP", "MySQL", "Blade", "REST APIs"],
+      githubUrl: "https://github.com/username/supply-chain-management",
+      demoUrl: "https://scm-demo.example.com",
+      image: "/images/projects/supplychain.jpg"
     }
   ],
   skills: {
