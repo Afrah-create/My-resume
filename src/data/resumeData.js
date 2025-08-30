@@ -6,7 +6,7 @@ export const resumeData = {
     email: "fahadirashidawongo@gmail.com",
     phone: "(256) 764922070",
     location: "Kampala, Uganda",
-    linkedin: "https://linkedin.com/in/yourprofile",
+    linkedin: "https://www.linkedin.com/in/awongo-fahadi-rashid-0b823a363",
     github: "https://github.com/Afrah-Create",
     summary: "Passionate software engineering student with strong technical skills in full-stack development. Experienced in building responsive web applications using modern JavaScript frameworks and libraries. Strong problem-solving abilities and a commitment to writing clean, maintainable code.",
     avatar: "/images/about/Fahad.jpg"
