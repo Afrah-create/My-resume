@@ -89,9 +89,11 @@ const Header = ({ data }) => {
                 </div>
 
                 <div className="about-images">
-                  {/* Replace src values with your actual images */}
-                  <img src="/images/about/Fahad.jpg" alt="Working session or project highlight" />
-                  <img src="/images/about/Afr2.webp" alt="Speaking, hackathon, or team collaboration" />
+                  <img
+                    src={personal.avatar}
+                    alt={`${personal.name} portrait`}
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
