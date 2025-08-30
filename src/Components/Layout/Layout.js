@@ -14,7 +14,7 @@ const Layout = ({ children, sections, activeSection, onSectionChange }) => {
   return (
     <div className="layout">
       {/* Sidebar Navigation */}
-      <aside className={`sidebar ${open ? 'open' : ''}`} aria-label="Primary">
+      <aside id="primary-sidebar" className={`sidebar ${open ? 'open' : ''}`} aria-label="Primary">
         <div className="brand">
           <img
             className="brand-avatar"
@@ -46,11 +46,46 @@ const Layout = ({ children, sections, activeSection, onSectionChange }) => {
         <header className="topbar">
           <button
             className="nav-toggle"
-            aria-label="Toggle navigation"
+            aria-label={open ? 'Close navigation' : 'Open navigation'}
             aria-expanded={open}
+            aria-controls="primary-sidebar"
+            type="button"
             onClick={() => setOpen((v) => !v)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setOpen((v) => !v);
+              }
+            }}
           >
-            <span className="hamburger" />
+            {open ? (
+              <svg
+                className="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                role="img"
+                aria-hidden="true"
+              >
+                <line x1="6" y1="6" x2="18" y2="18" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+                <line x1="18" y1="6" x2="6" y2="18" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+              </svg>
+            ) : (
+              <svg
+                className="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                role="img"
+                aria-hidden="true"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+                <line x1="3" y1="12" x2="21" y2="12" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+                <line x1="3" y1="18" x2="21" y2="18" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+              </svg>
+            )}
           </button>
           <h1 className="topbar-title">{sections.find(s => s.id === activeSection)?.label || 'About'}</h1>
         </header>
@@ -59,6 +94,14 @@ const Layout = ({ children, sections, activeSection, onSectionChange }) => {
           {children}
         </div>
       </main>
+      {/* Overlay to close sidebar on mobile */}
+      <div
+        className={`sidebar-overlay ${open ? 'show' : ''}`}
+        onClick={() => setOpen(false)}
+        onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}
+        tabIndex={-1}
+        aria-hidden={!open}
+      />
     </div>
   );
 };
