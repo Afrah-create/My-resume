@@ -5,35 +5,23 @@
 
 /* Timeline layout */
 .timeline {
+  /* Switch to grid for equal-width cards */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
   position: relative;
-  padding-left: 28px;
+  padding-left: 0; /* remove left gutter from timeline */
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--border), rgba(0,0,0,0));
-}
+.timeline::before { display: none; }
 
 .timeline-item {
-  position: relative;
-  margin-bottom: var(--spacing-lg);
+  position: static;
+  margin: 0; /* spacing handled by grid gap */
+  display: flex;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -2px;
-  top: 10px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--secondary);
-  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
-}
+.timeline-dot { display: none; }
 
 /* Card */
 .edu-card {
@@ -44,6 +32,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid var(--border);
   min-width: 0; /* prevent overflow and letter-per-line on small screens */
+  width: 100%;
+  height: 100%; /* equal height cards */
 }
 
 .edu-card:hover {
@@ -174,13 +164,7 @@
 /* Extra small devices */
 @media (max-width: 600px) {
   .timeline {
-    padding-left: 20px;
-  }
-  .timeline::before {
-    left: 8px;
-  }
-  .timeline-dot {
-    left: -6px;
+    grid-template-columns: 1fr; /* single column on very small screens */
   }
   .edu-card {
     padding: var(--spacing-md);
@@ -196,3 +180,9 @@
     font-size: 0.8rem;
   }
 }
+
+/* Force remove legacy timeline visuals */
+.education.timeline::before { display: none !important; }
+.education .timeline-dot { display: none !important; }
+.education .timeline-item::before,
+.education .timeline-item::after { display: none !important; }

@@ -49,9 +49,14 @@ const Education = ({ data }) => {
                   </h3>
                   <div className="edu-school">{edu.school}</div>
                   <div className="edu-meta">
-                    <span className="edu-date">
-                      <FontAwesomeIcon icon={faCalendarAlt} /> {edu.startDate} - {edu.endDate || 'Present'}
-                    </span>
+                    {(() => {
+                      const dateText = [edu.startDate, edu.endDate].filter(Boolean).join(' - ');
+                      return dateText ? (
+                        <span className="edu-date">
+                          <FontAwesomeIcon icon={faCalendarAlt} /> {dateText}
+                        </span>
+                      ) : null;
+                    })()}
                   </div>
                 </div>
               </div>

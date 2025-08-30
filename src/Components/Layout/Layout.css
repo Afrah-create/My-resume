@@ -32,7 +32,8 @@
 }
 
 .layout {
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: #f5f7fb;
   overflow-x: hidden;
@@ -114,12 +115,18 @@
   color: #fff;
 }
 
-/* Content area */
-.content {
-  position: relative;
-  min-width: 0;
-  overflow: visible;
-  /* offset for fixed topbar height */
+/* Main content area */
+.main-content {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  transition: margin 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* offset for fixed topbar height */
+.main-content .content {
   padding-top: 64px;
 }
 

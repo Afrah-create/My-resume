@@ -4,6 +4,7 @@ import './Layout.css';
 import { resumeData } from '../../data/resumeData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faGraduationCap, faBriefcase, faCode, faCog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Footer from './Footer';
 
 const Layout = ({ children, sections, activeSection, onSectionChange }) => {
   const [open, setOpen] = useState(false);
@@ -117,6 +118,7 @@ const Layout = ({ children, sections, activeSection, onSectionChange }) => {
         <div className="content-inner">
           {children}
         </div>
+        <Footer />
       </main>
       {/* Overlay to close sidebar on mobile */}
       <div
