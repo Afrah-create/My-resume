@@ -1,37 +1,61 @@
 // src/components/layout/Layout.js
-import React from 'react';
+import React, { useState } from 'react';
+import './Layout.css';
+import { resumeData } from '../../data/resumeData';
 
 const Layout = ({ children, sections, activeSection, onSectionChange }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleNavigate = (id) => {
+    onSectionChange(id);
+    setOpen(false); // close sidebar on mobile after selection
+  };
+
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
-      {/* Navigation Sidebar */}
-      <nav style={{ width: '280px', backgroundColor: '#f8f9fa', padding: '20px' }}>
-        <h3>Resume Sections</h3>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {sections.map((section) => (
-            <li key={section.id} style={{ marginBottom: '10px' }}>
-              <button
-                style={{
-                  width: '100%',
-                  padding: '10px',
-                  border: 'none',
-                  backgroundColor: activeSection === section.id ? '#007bff' : 'transparent',
-                  color: activeSection === section.id ? 'white' : '#333',
-                  cursor: 'pointer',
-                  borderRadius: '4px'
-                }}
-                onClick={() => onSectionChange(section.id)}
-              >
-                {section.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <div className="layout">
+      {/* Sidebar Navigation */}
+      <aside className={`sidebar ${open ? 'open' : ''}`} aria-label="Primary">
+        <div className="brand">
+          <img
+            className="brand-avatar"
+            src={resumeData.personal.avatar}
+            alt={`${resumeData.personal.name} avatar`}
+            loading="lazy"
+          />
+          <span className="brand-name">My Resume</span>
+        </div>
+
+        <nav className="nav">
+          <ul className="nav-list">
+            {sections.map((section) => (
+              <li key={section.id}>
+                <button
+                  className={`nav-link ${activeSection === section.id ? 'active' : ''}`}
+                  onClick={() => handleNavigate(section.id)}
+                >
+                  {section.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
 
       {/* Main Content */}
-      <main style={{ flex: 1, padding: '20px' }}>
-        <div style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+      <main className="content">
+        <header className="topbar">
+          <button
+            className="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="hamburger" />
+          </button>
+          <h1 className="topbar-title">{sections.find(s => s.id === activeSection)?.label || 'About'}</h1>
+        </header>
+
+        <div className="content-inner">
           {children}
         </div>
       </main>

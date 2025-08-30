@@ -10,18 +10,6 @@ const Header = ({ data }) => {
   return (
     <header className="header">
       <div className="about-layout">
-        <div className="about-avatar">
-          {personal?.avatar ? (
-            <img
-              src={personal.avatar}
-              alt={`${personal.name} headshot`}
-              className="avatar-img"
-            />
-          ) : (
-            <div className="avatar-placeholder" aria-label="Profile photo placeholder" />
-          )}
-        </div>
-
         <div className="about-main">
           <div className="about-panel">
             <div className="header-content">

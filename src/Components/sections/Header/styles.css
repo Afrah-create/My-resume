@@ -1,10 +1,10 @@
 .header {
-  text-align: center;
-  padding: var(--spacing-xl) 0;
+  text-align: left;
+  padding: var(--spacing-lg);
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: white;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-lg) 0;
   box-shadow: var(--shadow-md);
 }
 
@@ -24,15 +24,15 @@
 }
 
 .header p {
-  max-width: 700px;
-  margin: 0 auto var(--spacing-md);
+  max-width: 760px;
+  margin: 0 0 var(--spacing-md) 0;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-info {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
@@ -61,7 +61,7 @@
 
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
 }
@@ -86,12 +86,12 @@
 /* About layout */
 .about-layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: var(--spacing-xl);
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0;
 }
 
 /* Inner panel to improve readability on gradient */
@@ -213,7 +213,7 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-md);
   }
   
   .header h1 {
@@ -227,7 +227,7 @@
   .about-layout {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
-    padding: 0 var(--spacing-md);
+    padding: 0;
   }
 
   .about-grid {
