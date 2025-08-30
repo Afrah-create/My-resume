@@ -80,3 +80,16 @@
     padding: var(--spacing-md);
   }
 }
+
+/* Extra small devices */
+@media (max-width: 600px) {
+  .skills-grid {
+    gap: var(--spacing-md);
+  }
+  .skill-category h3 {
+    font-size: 1.1rem;
+  }
+  .skill-tag {
+    font-size: 0.85rem;
+  }
+}

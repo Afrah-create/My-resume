@@ -170,3 +170,37 @@ a:hover {
     padding: 0 var(--spacing-md);
   }
 }
+
+/* Ensure media scales and text wraps sanely on very small devices */
+img, video, svg, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  overflow-x: hidden;
+}
+
+/* Avoid per-letter vertical stacking on small screens */
+@media (max-width: 600px) {
+  p, li, .project-description, .timeline-description {
+    word-break: normal;
+    overflow-wrap: break-word; /* prefer breaking at spaces */
+    hyphens: auto;
+  }
+  /* Ensure readable text colors regardless of inherited white styles */
+  .section,
+  .section h1,
+  .section h2,
+  .section h3,
+  .section h4,
+  .section p,
+  .section li,
+  .card,
+  .card *:not(a) {
+    color: var(--text) !important;
+  }
+  .section a {
+    color: var(--secondary) !important;
+  }
+}

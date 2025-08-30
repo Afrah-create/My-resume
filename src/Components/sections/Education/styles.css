@@ -43,6 +43,7 @@
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid var(--border);
+  min-width: 0; /* prevent overflow and letter-per-line on small screens */
 }
 
 .edu-card:hover {
@@ -56,6 +57,7 @@
   grid-template-columns: 64px 1fr;
   gap: var(--spacing-md);
   align-items: center;
+  min-width: 0;
 }
 
 .edu-logo {
@@ -162,5 +164,35 @@
   }
   .edu-date {
     font-size: 0.85rem;
+  }
+  .edu-titles {
+    /* container for text next to logo */
+    min-width: 0;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 20px;
+  }
+  .timeline::before {
+    left: 8px;
+  }
+  .timeline-dot {
+    left: -6px;
+  }
+  .edu-card {
+    padding: var(--spacing-md);
+  }
+  .edu-degree {
+    font-size: 1.05rem;
+  }
+  .courses {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+  }
+  .course-tag {
+    font-size: 0.8rem;
   }
 }

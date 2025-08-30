@@ -46,6 +46,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   border-left: 3px solid var(--primary);
+  min-width: 0; /* allow wrapping in flex rows */
 }
 
 .timeline-item:hover .timeline-content {
@@ -95,6 +96,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0; /* prevent long text from forcing tiny columns */
 }
 
 .timeline-title {
@@ -111,6 +113,7 @@
   transition: color 0.2s ease;
   display: inline-flex;
   align-items: center;
+  overflow-wrap: anywhere;
 }
 
 .company-link:hover {
@@ -146,6 +149,8 @@
   color: var(--text);
   line-height: 1.6;
   margin-bottom: 15px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .timeline-responsibilities {
@@ -251,5 +256,32 @@
   
   .company, .company-link {
     margin-bottom: 10px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 600px) {
+  .experience-container {
+    padding: 0 var(--spacing-sm);
+  }
+  .timeline-content {
+    padding: var(--spacing-md);
+  }
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+  .company, .company-link {
+    font-size: 1rem;
+  }
+  .timeline-responsibilities {
+    margin: 10px 0;
+    padding-left: 16px;
+  }
+  .timeline-responsibilities li {
+    margin-bottom: 6px;
+  }
+  .tag {
+    padding: 3px 10px;
+    font-size: 0.78rem;
   }
 }

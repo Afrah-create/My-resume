@@ -6,6 +6,7 @@ import Education from './Components/sections/Education/Education';
 import Experience from './Components/sections/Experiences/Experience'; // Note: folder is "Experiences"
 import Projects from './Components/sections/Projects/Projects';
 import Skills from './Components/sections/Skills/Skills';
+import Contact from './Components/sections/Contact/Contact';
 import { resumeData } from './data/resumeData';
 import './App.css';
 
@@ -17,7 +18,8 @@ function App() {
     { id: 'education', label: 'Education', component: Education },
     { id: 'experience', label: 'Experience', component: Experience },
     { id: 'projects', label: 'Projects', component: Projects },
-    { id: 'skills', label: 'Skills', component: Skills }
+    { id: 'skills', label: 'Skills', component: Skills },
+    { id: 'contact', label: 'Contact', component: Contact }
   ];
 
   const ActiveComponent = sections.find(section => section.id === activeSection)?.component || Header;

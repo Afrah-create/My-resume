@@ -152,3 +152,29 @@
     max-width: 100%;
   }
 }
+
+/* Extra small devices */
+@media (max-width: 600px) {
+  .projects-grid {
+    gap: var(--spacing-md);
+  }
+  .project-thumb {
+    height: 160px;
+  }
+  .project-content {
+    padding: var(--spacing-md);
+  }
+  .project-title {
+    font-size: 1.15rem;
+  }
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .tech-tag {
+    font-size: 0.74rem;
+  }
+  .project-link {
+    font-size: 0.88rem;
+  }
+}
