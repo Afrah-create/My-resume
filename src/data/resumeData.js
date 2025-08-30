@@ -135,11 +135,11 @@ export const resumeData = {
     },
     {
       id: 2,
-      title: "School Website",
-      description: "A responsive informational website for a secondary school featuring pages for academics, admissions, news, gallery, and contact, optimized for performance and accessibility.",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      githubUrl: "https://github.com/username/school-website",
-      demoUrl: "https://school.example.com",
+      title: "Bweranyangi Girls Group Website",
+      description: "A responsive website for Bweranyangi Girls Group featuring information about the school, academics, admissions, news, gallery, and contact details. Built with modern web technologies for optimal performance and accessibility.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      githubUrl: "https://github.com/Afrah-Create/Bweranyangi-Girls-Group-G",
+      demoUrl: "https://afrah-create.github.io/Bweranyangi-Girls-Group-G/",
       image: "/images/projects/school.JPG"
     },
     {
@@ -157,7 +157,7 @@ export const resumeData = {
       description: "An end-to-end supply chain management system built with Laravel handling inventory, procurement, supplier management, order tracking, and role-based access control.",
       technologies: ["Laravel", "PHP", "MySQL", "Blade", "REST APIs"],
       githubUrl: "https://github.com/username/supply-chain-management",
-      demoUrl: "https://scm-demo.example.com",
+      demoUrl: "https://afrah-create.github.io/Apex234/",
       image: "/images/projects/supplychain.jpg"
     }
   ],
