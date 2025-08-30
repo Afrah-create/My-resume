@@ -16,7 +16,7 @@ export const resumeData = {
       id: 1,
       degree: "Bachelor of Science in Software Engineering",
       school: "Makerere University",
-      logo: "/images/about/Fahad.jpg", // placeholder logo
+      logo: "/images/education/Mak_Logo-removebg-preview.png", // placeholder logo
       startDate: "January 2025",
       endDate: "Expected May 2026",
       gpa: "4.5",
@@ -34,7 +34,7 @@ export const resumeData = {
       id: 2,
       degree: "Uganda Advanced Certificate of Education (A-Level)",
       school: "Aringa Secondary School",
-      logo: "/images/about/Afr2.webp", // placeholder logo
+      logo: "/images/education/Aringa-Logo.jpg", // placeholder logo
       startDate: "2022",
       endDate: "2023",
       relevantCourses: ["Mathematics", "Physics", "ICT"]
@@ -43,7 +43,7 @@ export const resumeData = {
       id: 3,
       degree: "Uganda Certificate of Education (O-Level)",
       school: "Aringa Secondary School",
-      logo: "/images/about/Fahad.jpg", // placeholder logo
+      logo: "/images/education/Aringa-Logo.jpg", // placeholder logo
       startDate: "2017",
       endDate: "2020"
     },
@@ -51,7 +51,7 @@ export const resumeData = {
       id: 4,
       degree: "Primary Education",
       school: "Obongi Town Primary School",
-      logo: "/images/about/Afr2.webp", // placeholder logo
+      logo: "/images/education/Obongi-Logo.jpg", // placeholder logo
       startDate: "2010",
       endDate: "2016"
     }
