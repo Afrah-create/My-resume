@@ -1,13 +1,13 @@
 // src/data/resumeData.js
 export const resumeData = {
   personal: {
-    name: "Your Full Name",
+    name: "Awongo Fahadi Rashid",
     title: "Software Engineering Student",
-    email: "your.email@example.com",
-    phone: "(555) 123-4567",
-    location: "Your City, State",
+    email: "fahadirashidawongo@gmail.com",
+    phone: "(256) 764922070",
+    location: "Kampala, Uganda",
     linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
+    github: "https://github.com/Afrah-Create",
     summary: "Passionate software engineering student with strong technical skills in full-stack development. Experienced in building responsive web applications using modern JavaScript frameworks and libraries. Strong problem-solving abilities and a commitment to writing clean, maintainable code.",
     avatar: "/path/to/your/avatar.jpg"
   },
@@ -15,10 +15,10 @@ export const resumeData = {
     {
       id: 1,
       degree: "Bachelor of Science in Software Engineering",
-      school: "Your University",
-      startDate: "September 2022",
+      school: "Makerere University",
+      startDate: "January 2025",
       endDate: "Expected May 2026",
-      gpa: "3.8",
+      gpa: "4.5",
       relevantCourses: [
         "Data Structures & Algorithms",
         "Web Development",
