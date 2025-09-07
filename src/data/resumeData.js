@@ -4,7 +4,7 @@ export const resumeData = {
     name: "Awongo Fahadi Rashid",
     title: "Software Engineering Student",
     email: "fahadirashidawongo@gmail.com",
-    phone: "(256) 764922070",
+    phone: "(+256) 764922070",
     location: "Kampala, Uganda",
     linkedin: "https://www.linkedin.com/in/awongo-fahadi-rashid-0b823a363",
     github: "https://github.com/Afrah-Create",
@@ -34,7 +34,7 @@ export const resumeData = {
       id: 2,
       degree: "Uganda Advanced Certificate of Education (A-Level)",
       school: "Aringa Secondary School",
-      logo: "/images/education/Aringa-Logo.jpg", // placeholder logo
+  logo: "/images/education/Aringa-Logo.JPG", // placeholder logo
       startDate: "2021",
       endDate: "2023",
       relevantCourses: ["Mathematics", "Physics", "ICT"]
@@ -43,7 +43,7 @@ export const resumeData = {
       id: 3,
       degree: "Uganda Certificate of Education (O-Level)",
       school: "Aringa Secondary School",
-      logo: "/images/education/Aringa-Logo.jpg", // placeholder logo
+  logo: "/images/education/Aringa-Logo.JPG", // placeholder logo
       startDate: "2017",
       endDate: "2020"
     },
@@ -51,7 +51,7 @@ export const resumeData = {
       id: 4,
       degree: "Primary Education",
       school: "Obongi Town Primary School",
-      logo: "/images/education/Obongi-Logo.jpg", // placeholder logo
+  logo: "/images/education/Obongi-Logo.JPG", // placeholder logo
       startDate: "2010",
       endDate: "2016"
     }
