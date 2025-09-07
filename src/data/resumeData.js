@@ -149,7 +149,7 @@ export const resumeData = {
       technologies: ["React", "styled-components", "Framer Motion", "React Icons"],
       githubUrl: "https://github.com/Afrah-Create/portfolio",
       demoUrl: "https://afrah-create.github.io/portfolio/",
-      image: "/images/projects/potfolio.jpg"
+  image: "/images/projects/potfolio.JPG"
     },
     {
       id: 4,
@@ -158,7 +158,7 @@ export const resumeData = {
       technologies: ["Laravel", "PHP", "MySQL", "Blade", "REST APIs"],
       githubUrl: "https://github.com/username/supply-chain-management",
       demoUrl: "https://afrah-create.github.io/Apex234/",
-      image: "/images/projects/supplychain.jpg"
+  image: "/images/projects/supplychain.JPG"
     }
   ],
   skills: {
