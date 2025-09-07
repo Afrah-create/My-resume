@@ -19,7 +19,7 @@ export const resumeData = {
       logo: "/images/education/Mak_Logo-removebg-preview.png", // placeholder logo
       startDate: "August 2024",
       endDate: "Expected January 2029",
-      gpa: "4.5",
+      gpa: "4.0",
       relevantCourses: [
         "Data Structures & Algorithms",
         "Web Development",
