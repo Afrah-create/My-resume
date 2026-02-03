@@ -159,6 +159,40 @@ export const resumeData = {
       githubUrl: "https://github.com/username/supply-chain-management",
       demoUrl: "https://afrah-create.github.io/Apex234/",
   image: "/images/projects/supplychain.JPG"
+    },
+    {
+      id: 5,
+      title: "Julie Crafts",
+      description: "An ecommerce platform for a craft business built with Next.js and Supabase, featuring a product catalog, shopping cart, and checkout system for customers to browse and purchase handmade craft items.",
+      technologies: ["Next.js", "Supabase", "CSS3", "JavaScript"],
+      githubUrl: "https://github.com/Justusmayanja/Julie-craft.git",
+      demoUrl: "https://julie-craft-usersite.vercel.app/",
+      image: "/images/projects/Julie-crafts.jpeg"
+    },
+    {
+      id: 6,
+      title: "Kiyindi Mukene",
+      description: "An order management and delivery tracking system built with Next.js and Supabase. Customers can place orders, track deliveries in real-time, and use the pay-on-delivery payment option for seamless transactions.",
+      technologies: ["Next.js", "Supabase", "JavaScript"],
+      githubUrl: "https://github.com/Afrah-create/Kiyindi-mukene.git",
+      demoUrl: "https://kiyindi-mukene.vercel.app",
+      image: "/images/projects/Mukene.jpeg"
+    },
+    {
+      id: 7,
+      title: "Easton Hill Primary School Portal",
+      description: "A school management portal built with Next.js and Supabase featuring role-based access control. Students can login to view their academic details, teachers can upload and manage results, and admins assign teachers and manage school operations.",
+      technologies: ["Next.js", "Supabase", "JavaScript", "RBAC"],
+      githubUrl: "https://github.com/Afrah-create/easton_hill.git",
+      demoUrl: "https://easton-hill-3ul5.vercel.app/",
+      image: "/images/projects/school-portal.jpeg"
+    },
+    {
+      id: 8,
+      title: "Centre for Tomorrow",
+      description: "An organization website dedicated to raising funds for children in need. Enables donors to contribute and support initiatives that help improve the lives of vulnerable children.",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      demoUrl: "https://www.centerfortomorrow.org"
     }
   ],
   skills: {
